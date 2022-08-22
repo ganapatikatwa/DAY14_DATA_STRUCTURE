@@ -109,7 +109,7 @@ namespace DataStructure
             return head;
         }
 
-        public Node Delete()
+        public Node DeleteFirst()
         {
             if (this.head == null)
             {
@@ -117,6 +117,28 @@ namespace DataStructure
             }
             this.head = this.head.Next;
             return this.head;
+        }
+
+        public Node DeleteLast()
+        { 
+            if(head==null)
+            {
+                return null;
+            }
+            if (head.Next==null)
+            {
+                return null;
+            }
+            Node newNode = head;
+            while(newNode.Next.Next!=null)
+            {
+                newNode = newNode.Next;
+
+            }
+            newNode.Next = null;
+            return head;
+
+                    
         }
     }
 }
