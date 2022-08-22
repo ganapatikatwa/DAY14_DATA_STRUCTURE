@@ -108,5 +108,15 @@ namespace DataStructure
 
             return head;
         }
+
+        public Node Delete()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.Next;
+            return this.head;
+        }
     }
 }
